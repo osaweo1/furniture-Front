@@ -910,12 +910,12 @@ body{
         position: absolute;
         right: 0;
         height: 10%;
-        z-index: -1;
+        z-index: 1;
         width: 100%;
         /* background-color: #f4f4f4; */
-        top: -20px;
+        top: 40px;
         align-items: center;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         background-color: rgb(7, 23, 18);
@@ -923,7 +923,7 @@ body{
       }
 
       .nav.navmove{
-        top: 40px;
+        display: flex;
       }
 
       .header .nav ul {
@@ -948,6 +948,9 @@ body{
 
     .menu-container{
       display: block;
+    }
+    .menu-container i{
+      cursor: pointer;
     }
 
     .hero .hero-text{
@@ -1333,14 +1336,14 @@ body{
   }
   .header .nav{
     position: absolute;
-    right: -200px;
+    right: 0;
     height: 100%;
     z-index: 1;
     width: 50%;
     /* background-color: #f4f4f4; */
     top: 44px;
     align-items: center;
-    display: flex;
+    display: none;
     
     justify-content: center;
     align-items: flex-start;
@@ -1348,7 +1351,7 @@ body{
     transition: .6s ease-out;
   }
   .nav.navmove{
-    right: 0;
+    display: flex;
   }
   .header .nav ul {
     display: flex;
@@ -1364,6 +1367,9 @@ body{
   }
   .menu-container{
     display: block;
+  }
+  .menu-container i{
+    cursor: pointer;
   }
   .hero {
     padding: 10px 10px;
