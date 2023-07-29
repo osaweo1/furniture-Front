@@ -23,6 +23,7 @@ const handelChange=(e)=>{
             name='email'
             value={values.email}
             onChange={handelChange}
+            placeholder='Enter Email...'
         />
     <label htmlFor='password'>Password:</label>
         <input
@@ -30,6 +31,7 @@ const handelChange=(e)=>{
             name='password'
             value={values.password}
             onChange={handelChange}
+            placeholder='password'
         />  
     
     
