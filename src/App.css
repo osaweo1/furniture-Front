@@ -890,8 +890,119 @@ body{
   margin-left: 50px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 
-
+  .header {
+  
+    padding: 5px 60px;
+    height: 10vh;
+    /* bor
+    der: 1px solid; */
+  }
+  .header .nav ul li a {
+    text-decoration: none;
+    font-size: .6rem;
+    
+  } 
+  .hero {
+    padding: 20px 60px;
+    height: 100%;
+    
+  }
+  .hero .hero-text h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    width: 80%;
+   
+  }
+  .hero .hero-image-div .hero-image1 {
+    position: absolute;
+    width: 200px;
+    top: -20px;
+    z-index: 0;
+    left: 100px;
+    
+  }
+  .header .hero-image-div{
+    width: 100%;
+  }
+  .hero .hero-image-div .hero-image {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+  }
+  .homecontact-container .homecontact-des {
+    width: 50%;
+    padding: 10px 40px;
+    
+    background-position: 50% 40%;
+  }
+  .homecontact-container .homecontact-des h2 {
+    
+    /* margin-bottom: 30px; */
+    font-size: 1.5rem;
+  } 
+  .homecontact-form {
+    
+    padding: 20px 40px;
+  }
+  .brief-content {
+    padding: 0px 20px;
+    z-index: 2;
+    /* border: 1px solid; */
+  }
+  .brief-content p {
+    position: absolute;
+    top: 10%;
+    line-height: 50px;
+    height: 50px;
+    margin-top: 0px;
+    /* margin-left: -300px; */
+    font-size: 1.5rem;
+    width: 90%;
+    
+  }
+  .register-container {
+    
+    padding: 40px 40px;
+    
+  }
+  .login-form-form {
+    
+    width: 90%;
+    
+    justify-content: center;
+    
+  }
+  .register-form {
+    width: 50%;
+    padding: 0;
+  }
+  .register-form-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 0px;
+  }  
+  .register-hero {
+    
+    width: 40%;
+    position: relative;
+    background-color: #0d472ffe;
+    height: 100%;
+    padding: 0;
+  }
+  .register-hero p {
+    width: 100%;
+    padding: 10px;
+    /* background-color: #d1d1d1; */
+    height: 100%;
+    /* margin-top: -20px; */
+    position: relative;
+    
+    
+  }
+}
 
 
 
@@ -948,9 +1059,11 @@ body{
 
     .menu-container{
       display: block;
+      width: 40px;
     }
     .menu-container i{
       cursor: pointer;
+      width: 100%;
     }
 
     .hero .hero-text{
@@ -1327,7 +1440,7 @@ body{
       text-align: center;
     }
 }
-@media only screen and (min-width: 300px) and (max-width: 599px) {
+@media only screen and (min-width: 280px) and (max-width: 599px) {
   .header {
     z-index: 999;
     padding: 5px 20px;
