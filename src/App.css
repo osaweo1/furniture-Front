@@ -1630,17 +1630,17 @@ body{
   .register-form-form {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin-left: 0px;
     
   }
   .register-form-form input {
     
-    padding: 5px;
+    padding: 10px;
     
   }
   .register-form-form button {
-    padding: 6px;
+    padding: 10px;
     margin-top: 10px;
     
   }
