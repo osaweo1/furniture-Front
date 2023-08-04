@@ -75,7 +75,7 @@ const handleShow1=()=>{
                 }
                 </div>
             
-
+                <p className='already1'><Link to={''}>Forgot password?</Link></p>
             <button>Login</button>
             <p className='already'>Don't have an account <Link to={'/register'}>Register</Link></p>
         </form>

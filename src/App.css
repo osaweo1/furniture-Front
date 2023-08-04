@@ -962,6 +962,11 @@ body{
 .login-form-form .pass{
   position: relative;
 }
+.login-form .login-form-form .already1 a{
+    color: #f4f4f4;
+    font-size: .8rem;
+    text-decoration: none;
+}
 .login-form-form .pass .showPassword{
   width: 20px;
   position: absolute;
@@ -1111,9 +1116,14 @@ body{
     padding: 40px 40px;
     
   }
+  .login-form{
+    height: 100%;
+    padding: 10px;
+  }
   .login-form-form {
     
     width: 90%;
+    height: 100%;
     
     justify-content: center;
     
