@@ -1,14 +1,36 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { appContext, useGlobalContext } from '../context'
+import axios from 'axios'
 
 const Header = () => {
+const url=process.env.REACT_APP_URL
 const[menu,setMenu]=useState(false)
-
+const[profile,setProfile]=useState(false)
+const {user,setPath}=useGlobalContext(appContext)
+// console.log(user._id)
+const {id}=useParams()
+console.log(id)
 const handlemenuopen=()=>{
     setMenu(true)
 }
 const handlemenusclose=()=>{
     setMenu(false)
+}
+
+const handleProfile=()=>{
+    setProfile(!profile)
+}
+
+useEffect(()=>{
+    setPath(id)
+})
+
+const handleLogout=async()=>{
+    const res=await axios.get(`${url}/logout`)
+    if(res.status===200){
+        window.location.href='/'
+    }
 }
   return (
     <div className='header'>
@@ -25,8 +47,23 @@ const handlemenusclose=()=>{
                 <li><Link to={'/showroom'}>Our Showroom</Link></li>
                 <li><Link to={'/about'}> About Us</Link></li>
                 <li><Link to={'/contact'}> Contact us</Link></li>
+               {user ? <div className='cartuser'>
+                    <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+                    <li><i onClick={handleProfile} class="fa fa-user proICon" aria-hidden="true"></i></li>
+                    </div>  
+                :
+                <div className='reglog'>
                 <li><Link to={'/login'}> Login</Link></li>
                 <li><Link to={'/register'}> Sign Up</Link></li>
+                </div>
+                 
+            }
+            <div className={profile ?'profile dis':'profile'}>
+            <li><Link to={`/profile/${user._id}`}>@{user.first_name}</Link></li>
+            <li onClick={handleLogout}> Logout</li>
+        </div> 
+           
+                
             
             
             </ul>
@@ -40,7 +77,7 @@ const handlemenusclose=()=>{
             <i onClick={handlemenuopen} class="fa fa-bars menu" aria-hidden="true"></i>
         }
         </div>
-        
+       
 
     </div>
   )

@@ -27,8 +27,9 @@ body{
   background-color: rgb(7, 23, 18);
   color: #f4f4f4;
   box-shadow: -2px 2px 2px -2px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-}
+  z-index: 5;
+  /* position: relative; */
+} 
 
 .header .logo{
   display: flex;
@@ -61,14 +62,31 @@ body{
   gap: 10px;
   list-style: none;
   color: #f4f4f4;
+  z-index: 3;
 }
+.header .nav ul .reglog{
+  display: flex;
+}
+.header .nav ul .cartuser{
+  display: flex;
+  gap: 10px;
+}
+.header .nav ul .cartuser li{
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+.header .nav ul .cartuser li:hover {
+  color:aquamarine;
+}
+
+
 .header .nav ul li a{
   text-decoration: none;
   font-size: .8rem;
   font-weight: 400;
   color: #f4f4f4;
   padding: 10px 5px;
-  border: 1px solid  rgb(7, 23, 18);
+  /* border: 1px solid  rgb(7, 23, 18); */
   transition: .5s ease;
 }
 .header .nav ul li a:hover{
@@ -80,6 +98,62 @@ body{
   
   color: aquamarine;
   border-bottom: 1px solid #f4f4f4;
+}
+.header .profile{
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  right: 50px;
+  top: 0;
+  background-color:transparent;
+  word-wrap: break-word;
+  display: none;
+  /* justify-content: center; */
+ 
+  flex-direction: column;
+  padding: 5px;
+  z-index: -1;
+  /* display: none; */
+  transition: .5s ease-in-out;
+  font-size: .8rem;
+}
+
+.header .profile.dis{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 60px;
+  z-index: 2;
+  background-color: rgb(7, 23, 18);
+  width: 10%;
+  padding: 10px;
+  height: 10%;
+}
+.header .profile li{
+  list-style: none;
+  font-size: .7rem;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: .8rem;
+}
+.header .profile.dis li:hover{
+  color: #f4f4f4;
+  text-decoration: none;
+  border-bottom: none;
+} 
+.header .profile li a{
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: .8rem;
+  
+}
+
+  
+
+.header .nav ul .proICon{
+  cursor: pointer;
 }
 
 /* homepage */
@@ -97,6 +171,7 @@ body{
   background-color: #0c241a;
   display: flex;
   position: relative;
+  z-index: 1;
 }
 .hero .hero-text{
   box-sizing: border-box;
@@ -170,6 +245,7 @@ body{
   color: #0c241a;
   margin-top: 20px;
   transition: .5s ease-in-out;
+  /* z-index: 999; */
 }
 .hero-explore:hover{
   color: #f4f4f4;
@@ -191,6 +267,7 @@ body{
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
+  z-index: -1;
 }
 .brief-content {
   
@@ -785,6 +862,10 @@ body{
   width: 60%;
   margin-left: -100px;
 }
+.register-form-form p{
+  font-size: .6rem;
+  color: red;
+}
 .register-form-form input{
   width: 100%;
   padding: 10px;
@@ -818,6 +899,7 @@ body{
   /* background-color: #0e5c3b; */
   /* padding:0px 20px */
   /* margin-left: -100px; */
+  gap:10px
 }
 .login-form-form input{
   width: 100%;
@@ -875,6 +957,17 @@ body{
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background-color: #0d472ffe;
+  position: relative;
+}
+.login-form-form .pass{
+  position: relative;
+}
+.login-form-form .pass .showPassword{
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  cursor: pointer;
 }
 
 .login-form-form label{
@@ -890,6 +983,27 @@ body{
   margin-left: 50px;
 }
 
+.register-form-form .already{
+  color: #0e5c3b;
+  font-size: .8rem;
+  font-weight: bold;
+}
+.register-form-form .already a{
+  text-decoration: none;
+  color: #810b0b;
+  font-size: .9rem;
+}
+.login-form-form .already{
+  color: #f4f4f4;
+  font-size: .8rem;
+  font-weight: bold;
+}
+.login-form-form .already a{
+  text-decoration: none;
+  color: #430303;
+  font-size: .9rem;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
   .header {
@@ -899,11 +1013,41 @@ body{
     /* bor
     der: 1px solid; */
   }
+  .header.nav{
+    
+  }
   .header .nav ul li a {
     text-decoration: none;
     font-size: .6rem;
     
   } 
+  .header .profile {
+    position:absolute;
+    /* width: 80px;
+    height: 50px; */
+    right: 30px;
+    top: 0;
+    background-color: transparent;
+    word-wrap: break-word;
+    display: flex;
+    /* justify-content: center; */
+    font-size: .8rem;
+    color: transparent;
+    
+}
+.header .profile.dis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  z-index: 3;
+  font-size: .8rem;
+  background-color: rgb(7, 23, 18);
+  width: 15%;
+  height: 15%;
+  color: #f4f4f4;
+  padding: 10px;
+}
   .hero {
     padding: 20px 60px;
     height: 100%;
@@ -948,7 +1092,7 @@ body{
   }
   .brief-content {
     padding: 0px 20px;
-    z-index: 2;
+    z-index: -1;
     /* border: 1px solid; */
   }
   .brief-content p {
@@ -977,11 +1121,13 @@ body{
   .register-form {
     width: 50%;
     padding: 0;
+    height: 100%;
   }
   .register-form-form {
     display: flex;
     flex-direction: column;
     width: 90%;
+    height: 100%;
     margin-left: 0px;
   }  
   .register-hero {
@@ -1048,6 +1194,36 @@ body{
       .header .nav ul li a{
           font-size: .6rem;
       }
+      /* .header .profile {
+        position:relative;
+       
+        right: 0px;
+        top: 0;
+        background-color: transparent;
+        word-wrap: break-word;
+        display: none;
+        
+        font-size: .8rem; 
+        
+    } */
+    .header .profile.dis {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      top: 50px;
+      right: 20%;
+      z-index: 1;
+      font-size: .8rem;
+      width: 100px;
+      height: 80px;
+      padding: 10px;
+      background-color: rgb(7, 23, 18);
+      word-wrap: break-word;
+    }
+    .header .profile li a {
+      /* margin-left: -10px; */
+  }
       .hero {
         padding: 20px 20px;
         height: 60%;
@@ -1477,6 +1653,25 @@ body{
   }
   .header .nav ul li a{
       font-size: .6rem;
+  }
+  .header .profile.dis{
+    display: flex;
+    top: 43%;
+    left : 0px;
+    background-color: #0c241a;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .nav ul .reglog{
+    display: flex;
+    flex-direction: column;
+  }
+  .header .nav ul .cartuser{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
   }
   .menu-container{
     display: block;

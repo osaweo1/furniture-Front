@@ -12,6 +12,7 @@ import ShowRoom from './pages/ShowRoom';
 import Contact from './pages/Contact';
 import  {SignUp}  from './pages/SignUp';
 import Signin from './pages/Signin';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route exact path='/contact' element={<Contact/>}/>
                 <Route exact path='/register' element={<SignUp/>}/>
                 <Route exact path='/login' element={<Signin/>}/>
+                <Route exact path='/profile/:id' element={<ProfilePage/>}/>
 
 
               </Route>
